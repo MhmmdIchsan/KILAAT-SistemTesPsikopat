@@ -8,6 +8,7 @@ use App\Models\Pertanyaan;
 use App\Models\Jawaban;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
+use Illuminate\Http\RedirectResponse;
 
 class SaikoController extends Controller
 {
@@ -69,8 +70,8 @@ class SaikoController extends Controller
     {
         $this->validate($request, [
             'nama' => 'required',
-            'point' => 'required',
-            'status' => 'required',
+            // 'point' => 'required',
+            // 'status' => 'required',
         ]);
 
         $answers = [
@@ -110,25 +111,29 @@ class SaikoController extends Controller
             $status = "Anda Tidak Menunjukkan Tanda-tanda Psikopat";
         }
 
-        Pengguna::create([
-            'nama' => $request->nama,
-            'point' => $answer,
-            'status' => $status
-        ]);
+        $pengguna = new Pengguna;
+        $pengguna->nama = $request->nama;
+        $pengguna->point = $total;
+        $pengguna->status = $status;
+        // save data
+        $pengguna->save();
 
-        return redirect()->route('result');
+        // Pengguna::create([
+        //     'nama' => $request->nama,
+        //     'point' => $total,
+        //     'status' => $status
+        // ]);
 
-        // // Simpan jawaban ke database
-        // // ...
-
-        // // Kembalikan respons
-        // return redirect()->to('/result');
+        return redirect()->route('saiko.result', compact('total', 'status','pengguna'));
         
     }
 
     public function result()
     {
-        return view('/result');
+        // $point = Pengguna::all();
+        // $status = Pengguna::all();
+        // $nama = Pengguna::all();
+        $pengguna = Pengguna::latest()->first();
+        return view('/result', compact('pengguna'));
     }
-
 }
