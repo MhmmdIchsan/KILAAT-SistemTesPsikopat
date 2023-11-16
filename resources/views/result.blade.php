@@ -61,12 +61,7 @@
                 </div>
             </div>
         </div>
-
-
     </main>
-
-
- 
 
     <footer class="bg-gray-900 w-full absolute bottom-0 border-t-2 border-black  block">
         <div class="w-full max-w-screen-xl mx-auto p-2 flex justify-center">
