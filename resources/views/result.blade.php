@@ -32,7 +32,7 @@
         <div class="container w-full mx-auto m-6 p-4 h-auto block  border rounded-xl shadow-lg text-white bg-gray-900 border-gray-700">
             <div class="bg-gray-700 rounded-lg p-4 pb-8 w-full">
        
-                <p class="text-center mt-3 mb-8 text-5xl font-normal font-Pixelify">Your psycho percentage : {{total}}%</p>
+                <p class="text-center mt-3 mb-8 text-5xl font-normal font-Pixelify">Your psycho percentage : {{ }} % </p>
                 <div class="flex justify-between mb-1 w-1/2 mx-auto mt-4">
                     <span class="text-base font-medium text-white dark:text-white">0%</span>
                     <span class="text-sm font-medium text-white dark:text-white">100%</span>
