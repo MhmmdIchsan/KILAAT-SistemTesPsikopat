@@ -32,432 +32,274 @@
   <main>
     <div class="container w-5/5 mx-auto m-6 p-8 h-auto block border rounded-xl shadow-lg bg-gray-900 border-gray-700">
 
-      <form action="('submit_answer') }}" method="post" class=" rounded-lg p-8 text-justify">
+      <form action="{{ route('main.store') }}" method="post" class=" rounded-lg p-8 text-justify">
+        @csrf
         <h5 class="mb-16 text-white text-3xl font-bold tracking-tight text-center ">PENILAIAN KARAKTER PSIKOPAT</h5>
+        <fieldset class="nama">
+            <legend class="mb-2 text-gray-200">Isi Nama Anda :</legend>
+            <div class="mb-2">
+              <input type="text" name="nama" id="nama" required class="mr-2 text-black">
+            </div>
+          </fieldset>
 
           <!-- Pertayaan 1 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">1. Bayangkan anda tinggal di apartemen yang cukup tinggi. Waktu itu anda kebetulan pergi ke balkon dan ketika sudah sampai di balkon dan melihat keluar anda menyaksikan seseorang membunuh. Seketika itu juga pembunuhnya menoleh ke anda dan pembunuh itu melakukan gerakan nunjuk-nunjuk ke arah anda. Pertanyaannya adalah apa yang dimaksud dengan pembunuh tersebut?</legend>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan1->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban1 as $jawaban1)
             <div class="mb-2">
-              <input type="radio" name="q1" id="q1a" value="0" class="mr-2">
-              <label class="text-sky-500" for="q1a">Menakut-nakuti anda</label>
+              <input type="radio" name="q1" id="{{ $jawaban1->id }}" value="{{ $jawaban1->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban1->id }}">{{ $jawaban1->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q1" id="q1b" value="0" class="mr-2">
-              <label class="text-sky-500" for="q1b">Jangan bilang siapa-siapa ya kamu!</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q1" id="q1c" value="0" class="mr-2">
-              <label class="text-sky-500" for="q1c">Menyuruh masuk ke dalam</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q1" id="q1d" value="5" class="mr-2">
-              <label class="text-sky-500" for="q1d">Hitung lantai</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
           
           <!-- Pertayaan 2 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">2. Bayangkan anda berada di jembatan penyeberangan. dibawah jembatan penyeberangan ini ditengah-tengahnya ialah rel kereta. Ketika anda sudah berada di tengah-tengah jembatan, anda menyaksikan ada 5 orang yang terikat di rel. Ketika anda melihat kebelakang anda melihat ada kereta api yang sedang melaju. Seketika itu anda juga baru menyadari bahwa ada 1 orang lain yang berdiri di sebelah anda. Anda memiliki 2 pilihan, yang pertama yaitu membiarkan kereta melaju dan melindas 5 orang tersebut dan yang kedua ialah mendorong orang di sebelah anda karena dengan matinya orang tersebut bisa menyelamatkan 5 orang tersebut. Apa pilihan anda?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q2" id="q2a" value="0" class="mr-2">
-              <label class="text-sky-500" for="q2a">Membiarkan kereta melaju</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan2->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban2 as $jawaban2)
+            <div class="mb-2">
+              <input type="radio" name="q2" id="{{ $jawaban2->id }}" value="{{ $jawaban2->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban2->id }}">{{ $jawaban2->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q2" id="q2b" value="5" class="mr-2">
-              <label class="text-sky-500" for="q2b">mendorong orang disebelah anda</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 3 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">3. Anda diberi pistol yang berisi 5 peluru dan disuruh membunuh lebih dari 6 orang. Pikirkan bagaimana caranya?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q3" id="q3a" value="0" class="mr-2">
-              <label class="text-sky-500" for="q3a">Menyuruh untuk berbaris</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan3->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban3 as $jawaban3)
+            <div class="mb-2">
+              <input type="radio" name="q3" id="{{ $jawaban3->id }}" value="{{ $jawaban1->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban3->id }}">{{ $jawaban3->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q3" id="q3b" value="0" class="mr-2">
-              <label class="text-sky-500" for="q3b">Menembak asal-asalan</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q3" id="q3c" value="0" class="mr-2">
-              <label class="text-sky-500" for="q3c">Membunuh ibu dan bayi yang sedang di gendong</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q3" id="q3d" value="5" class="mr-2">
-              <label class="text-sky-500" for="q3d">Membunuh ibu hamil</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 4 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">4. Teman anda tiba-tiba membawa barang anda dan mengaku-ngaku bahwa itu barang miliknya. Seberapa marah anda melihat tingkah laku teman anda?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q4" id="q4a" value="5" class="mr-2">
-              <label class="text-sky-500" for="q4a">0%</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan4->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban4 as $jawaban4)
+            <div class="mb-2">
+              <input type="radio" name="q4" id="{{ $jawaban4->id }}" value="{{ $jawaban4->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban4->id }}">{{ $jawaban4->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q4" id="q4b" value="5" class="mr-2">
-              <label class="text-sky-500" for="q4b">25%</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q4" id="q4c" value="0" class="mr-2">
-              <label class="text-sky-500" for="q4c">50%</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q4" id="q4d" value="0" class="mr-2">
-              <label class="text-sky-500" for="q4d">75%</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q4" id="q4e" value="0" class="mr-2">
-              <label class="text-sky-500" for="q4e">100%</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
       
           <!-- Pertayaan 5 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">5. Suatu hari anda sedang berjalan dan melihat di jalan ada tunawisma (homeless) yang kedinginan. Tiba-tiba ada orang yang datang dan membunuh dia. Kira-kira apa alasan/ motivasi dari pembunuh untuk membunuh tunawisma tersebut?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q5" id="q5a" value="0" class="mr-2">
-              <label class="text-sky-500" for="q5a">Merasa terganggu</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan5->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban5 as $jawaban5)
+            <div class="mb-2">
+              <input type="radio" name="q5" id="{{ $jawaban5->id }}" value="{{ $jawaban5->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban1->id }}">{{ $jawaban5->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q5" id="q5b" value="0" class="mr-2">
-              <label class="text-sky-500" for="q5b">Dendam dengan orang tersebut</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q5" id="q5c" value="5" class="mr-2">
-              <label class="text-sky-500" for="q5c">melepaskan penderitaan</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q5" id="q5d" value="0" class="mr-2">
-              <label class="text-sky-500" for="q5d">Ingin mengambil barang-barang yang ada di orang tersebut</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 6 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">6. Seseorang yang sangat anda benci, misalkan orang tersebut pernah melakukan kejahatan terhadap keluarga anda. Anda melihat orang tersebut bergelantungan di tebing dan anda harus membunuh orang tersebut. Bagaimana cara anda membunuh orang tersebut?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q6" id="q6a" value="0" class="mr-2">
-              <label class="text-sky-500" for="q6a">Tangannya diinjak</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan6->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban6 as $jawaban6)
+            <div class="mb-2">
+              <input type="radio" name="q6" id="{{ $jawaban6->id }}" value="{{ $jawaban6->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban6->id }}">{{ $jawaban6->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q6" id="q6b" value="5" class="mr-2">
-              <label class="text-sky-500" for="q6b">melepaskan jari satu-persatu</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q6" id="q6c" value="0" class="mr-2">
-              <label class="text-sky-500" for="q6c">Menendang tangannya dengan keras</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q6" id="q6d" value="0" class="mr-2">
-              <label class="text-sky-500" for="q6d">Melemparkan barang yang besar dan keras</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 7 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">7. Bayangkan ada seseorang yang terbangun dari tidurnya dan pergi kedapur untuk minum air. Tiba-tiba orang tersebut bertatapan mata dengan seorang maling yang berhasil masuk ke rumahnya. Dan orang tersebut lari masuk ke lemari baju. Anda disini sebagai malingnya, di tangan kanan anda ada sebuah pisau. Bagaimana cara anda membunuh orang yang ada dilemari tersebut?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q7" id="q7a" value="0" class="mr-2">
-              <label class="text-sky-500" for="q7a">Buka lemari dan tusuk</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan7->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban7 as $jawaban7)
+            <div class="mb-2">
+              <input type="radio" name="q7" id="{{ $jawaban7->id }}" value="{{ $jawaban7->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban7->id }}">{{ $jawaban7->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q7" id="q7b" value="5" class="mr-2">
-              <label class="text-sky-500" for="q7b">menunggu</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q7" id="q7c" value="0" class="mr-2">
-              <label class="text-sky-500" for="q7c">Tusuk-tusuk lemari</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q7" id="q7d" value="0" class="mr-2">
-              <label class="text-sky-500" for="q7d">Gembok/Kunci lemarinya</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 8 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">8. Anda bayangkan melihat sosok seseorang (tidak tampak wajahnya) yang sedang memegang pisau yang berlumuran darah. Kira-kira siapa orang tersebut?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q8" id="q8a" value="0" class="mr-2">
-              <label class="text-sky-500" for="q8a">Tukang daging</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan8->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban8 as $jawaban8)
+            <div class="mb-2">
+              <input type="radio" name="q8" id="{{ $jawaban8->id }}" value="{{ $jawaban8->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban8->id }}">{{ $jawaban8->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q8" id="q8b" value="0" class="mr-2">
-              <label class="text-sky-500" for="q8b">Orang memasak</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q8" id="q8c" value="0" class="mr-2">
-              <label class="text-sky-500" for="q8c">Tetangga anda</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q8" id="q8d" value="5" class="mr-2">
-              <label class="text-sky-500" for="q8d">anda sendiri</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q8" id="q8e" value="0" class="mr-2">
-              <label class="text-sky-500" for="q8e">Kawan anda</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 9 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">9. Bayangkan Anda ingin membunuh seseorang dan anda membutuhkan senjata. Anda pergi ke supermarket untuk beli pisau. Sampai di supermarket anda melihat 2 pisau. Yang pertama harga 5k dan yang kedua harga 50k. Pisau mana yang anda pilih dan berikan alasannya?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q9" id="q9a" value="5" class="mr-2">
-              <label class="text-sky-500" for="q9a">Murah, tidak lancip</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan9->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban9 as $jawaban9)
+            <div class="mb-2">
+              <input type="radio" name="q9" id="{{ $jawaban9->id }}" value="{{ $jawaban9->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban9->id }}">{{ $jawaban9->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q9" id="q9b" value="0" class="mr-2">
-              <label class="text-sky-500" for="q9b">Mahal bisa disimpan</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q9" id="q9c" value="0" class="mr-2">
-              <label class="text-sky-500" for="q9c">Murah, hemat</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q9" id="q9d" value="0" class="mr-2">
-              <label class="text-sky-500" for="q9d">Murah lebih banyak yang bisa beli</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 10 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">10. Bayangkan di dalam sebuah lift yang ada jendela kacanya di pintu. Di dalam lift tersebut ada orang cowok yang satu ialah psikopat dan yang satu lagi orang biasa. Orang psikopat tersebut ternyata membunuh orang yang normal tersebut menggunakan pisau sampai darahnya keluar ke seluruh lift. Setelah membunuh psikopat ini keluar dari lift dan tiba-tiba ia melihat ke dalam lagi (berbalik) dan melihat bagian dalam dari lift tersebut dari jendela. Apa alasan psikopat melihat ke dalam melalui jendela?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q10" id="q10a" value="0" class="mr-2">
-              <label class="text-sky-500" for="q10a">Cek apakah ada cctv</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan10->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban10 as $jawaban10)
+            <div class="mb-2">
+              <input type="radio" name="q10" id="{{ $jawaban10->id }}" value="{{ $jawaban10->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban10->id }}">{{ $jawaban10->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q10" id="q10b" value="0" class="mr-2">
-              <label class="text-sky-500" for="q10b">Melihat apakah orang tersebut sudah mati</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q10" id="q10c" value="0" class="mr-2">
-              <label class="text-sky-500" for="q10c">Memastikan tidak ada jejak lagi</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q10" id="q10d" value="5" class="mr-2">
-              <label class="text-sky-500" for="q10d">Melihat orang itu sedang mati</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 11 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">11. Ada seorang bocah memelihara seekor ikan lou han. Suatu hari ikan tersebut mati dan mamanya sesudah itu membelikan coklat untuk anak tersebut yang ukurannya mirip dengan ikan lou han. Tiba-tiba keesokan harinya bocah tersebut membunuh kakak kandungnya sendiri. Kira-kira apa motif bocah ini membunuh kakak kandungnya sendiri ?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q11" id="q11a" value="0" class="mr-2">
-              <label class="text-sky-500" for="q11a">Kakaknya membunuh ikannya</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan11->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban11 as $jawaban11)
+            <div class="mb-2">
+              <input type="radio" name="q11" id="{{ $jawaban11->id }}" value="{{ $jawaban11->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban11->id }}">{{ $jawaban11->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q11" id="q11b" value="0" class="mr-2">
-              <label class="text-sky-500" for="q11b">Coklatnya dimakan kakaknya</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q11" id="q11c" value="0" class="mr-2">
-              <label class="text-sky-500" for="q11c">Ingin dapat coklat lagi</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q11" id="q11d" value="5" class="mr-2">
-              <label class="text-sky-500" for="q11d">Ingin dapat coklat sebesar kakaknya</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 12 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">12. Bayangkan anda tinggal di suatu rumah yang terletak di tengah-tengah hutan dan tidak ada rumah yang lainnya. Karena rumah anda sedang kotor, anda memutuskan untuk membersihkan rumah. Karena rumah tersebut cukup besar, dari pagi sampai malam tidak selesai-selesai. Akhirnya di malam hari, paling tidak anda sudah berhasil membersihkan (hanya) ruang tengah. Setelah selesai bersih-bersih, sekarang anda ingin menata barang-barang. Kebetulan ketika anda membersihkan guci porselen, tiba-tiba ada suara dari kamar tidur anda. Karena anda kaget, guci tersebut jatuh dan pecah. Setelah itu kaki anda berdarah-darah. Terdapat 5 pilihan yang dapat anda lakukan. Apa yang anda akan lakukan?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q12" id="q12a" value="5" class="mr-2">
-              <label class="text-sky-500" for="q12a">mengambil kotak P3K</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan12->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban12 as $jawaban12)
+            <div class="mb-2">
+              <input type="radio" name="q12" id="{{ $jawaban12->id }}" value="{{ $jawaban12->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban12->id }}">{{ $jawaban12->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q12" id="q12b" value="0" class="mr-2">
-              <label class="text-sky-500" for="q12b">Mengintip kamar tidur</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q12" id="q12c" value="5" class="mr-2">
-              <label class="text-sky-500" for="q12c">menyapu pecahan guci</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q12" id="q12d" value="0" class="mr-2">
-              <label class="text-sky-500" for="q12d">Memegang pentungan</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q12" id="q12e" value="0" class="mr-2">
-              <label class="text-sky-500" for="q12e">Keluar dari rumah</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 13 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">13. Bayangkan anda menjadi seorang pembunuh dan memiliki senjata. Didepan anda ada 3 tawanan yang bisa anda bunuh. Berapa orang yang akan anda bunuh dan apa alasannya?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q13" id="q13a" value="5" class="mr-2">
-              <label class="text-sky-500" for="q13a">Membunuh 2 tawanan dan membiarkan 1 tawanan takut</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan13->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban13 as $jawaban13)
+            <div class="mb-2">
+              <input type="radio" name="q13" id="{{ $jawaban13->id }}" value="{{ $jawaban13->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban13->id }}">{{ $jawaban13->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q13" id="q13b" value="0" class="mr-2">
-              <label class="text-sky-500" for="q13b">Membunuh 1 tawanan dan membiarkan 2 tawanan takut </label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q13" id="q13c" value="0" class="mr-2">
-              <label class="text-sky-500" for="q13c">Membunuh semuanya untuk kebahagiaannya sendiri</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 14 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">14. Bayangkan anda sedang tidur dan terbangun karena sebuah mimpi buruk. Mimpi buruk tersebut terasa sangat nyata dan menyebabkan anda sangat ketakutan. Tubuh anda penuh dengan keringat dan anda merasa kedinginan. Apa yang akan anda lakukan di rumah?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q14" id="q14a" value="5" class="mr-2">
-              <label class="text-sky-500" for="q14a">pergi ke kamar mandi / bathtub</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan14->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban14 as $jawaban14)
+            <div class="mb-2">
+              <input type="radio" name="q14" id="{{ $jawaban14->id }}" value="{{ $jawaban14->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban14->id }}">{{ $jawaban14->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q14" id="q14b" value="0" class="mr-2">
-              <label class="text-sky-500" for="q14b">Menyalakan tv dan semua lampu</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q14" id="q14c" value="0" class="mr-2">
-              <label class="text-sky-500" for="q14c">Pergi ke ruang anggota keluarga yang belum tidur</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q14" id="q14d" value="0" class="mr-2">
-              <label class="text-sky-500" for="q14d">Telpon kawan akrab anda</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 15 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">15. Suatu ketika anda sedang menonton film horror. Tiba-tiba ada satu adegan yang membuat anda merinding.  Adegan apakah itu ? Terdapat 4 pilihan.</legend>
-             <div class="mb-2">
-              <input type="radio" name="q15" id="q15a" value="0" class="mr-2">
-              <label class="text-sky-500" for="q15a">Adegan pembunuhan</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan15->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban15 as $jawaban15)
+            <div class="mb-2">
+              <input type="radio" name="q15" id="{{ $jawaban15->id }}" value="{{ $jawaban15->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban15->id }}">{{ $jawaban15->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q15" id="q15b" value="5" class="mr-2">
-              <label class="text-sky-500" for="q15b">Pembunuh sedang mengejar korban</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q15" id="q15c" value="0" class="mr-2">
-              <label class="text-sky-500" for="q15c">Mayat jatuh dari ketinggian</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q15" id="q15d" value="0" class="mr-2">
-              <label class="text-sky-500" for="q15d">Orang bunuh diri</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 16 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">16. Suatu hari ada maling masuk ke dalam rumah anda dan maling tersebut membunuh seluruh keluarga anda. Anda adalah satu-satunya yang masih hidup dan berhadapan dengan pelaku tersebut. Uniknya saat itu maling tersebut tidak membunuh anda dan membiarkan anda hidup. Apa alasan maling tersebut?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q16" id="q16a" value="0" class="mr-2">
-              <label class="text-sky-500" for="q16a">Menanyakan barang berharga</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan16->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban16 as $jawaban16)
+            <div class="mb-2">
+              <input type="radio" name="q16" id="{{ $jawaban16->id }}" value="{{ $jawaban16->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban16->id }}">{{ $jawaban16->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q16" id="q16b" value="0" class="mr-2">
-              <label class="text-sky-500" for="q16b">Meminta uang yang ada</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q16" id="q16c" value="5" class="mr-2">
-              <label class="text-sky-500" for="q16c">Membiarkan anda ketakutan</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q16" id="q16d" value="0" class="mr-2">
-              <label class="text-sky-500" for="q16d">Kesalahan identitas</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 17 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">17. Terjadi sebuah kasus pemerkosaan di apartment tua, ternyata perempuan yang menjadi korban tersebut telah membiarkan pintu gerbang terbuka lama dan ia tertidur pulas di rumahnya. Saat itulah pelaku masuk ke rumah tersebut dan memperkosanya. Apa yang terpikir di benak anda mendengar kasus tersebut? Terdapat 4 pilihan.</legend>
-             <div class="mb-2">
-              <input type="radio" name="q17" id="q17a" value="0" class="mr-2">
-              <label class="text-sky-500" for="q17a">Korbannya yang salah karena membiarkan gerbang terbuka</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan17->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban17 as $jawaban17)
+            <div class="mb-2">
+              <input type="radio" name="q17" id="{{ $jawaban17->id }}" value="{{ $jawaban17->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban17->id }}">{{ $jawaban17->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q17" id="q17b" value="0" class="mr-2">
-              <label class="text-sky-500" for="q17b">Pelaku kasus tersebut yang salah karena masuk</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q17" id="q17c" value="5" class="mr-2">
-              <label class="text-sky-500" for="q17c">Keduanya tidak salah, situasi yang memungkinkan itu terjadi</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q17" id="q17d" value="0" class="mr-2">
-              <label class="text-sky-500" for="q17d">Keduanya salah</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 18 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">18. Bayangkan anda sedang berbelanja di supermarket yang besar. Tiba-tiba terdengar bunyi ledakan dan menyebabkan gedung runtuh dan kebakaran. Anda langsung tergesa-gesa untuk keluar dari tempat tersebut dan ketika anda ingin keluar anda menemukan 3 orang yang tertimpa batu besar. Kemudian anda ingin membantu 3 orang tersebut, namun saat itu juga anda melihat di arah berlawanan terdapat teman akrab anda sedang tertimpa batu juga. Kondisi saat itu mengharuskan anda untuk keluar dengan cepat karena bara api yang membesar. Siapa yang akan anda bantu?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q18" id="q18a" value="5" class="mr-2">
-              <label class="text-sky-500" for="q18a">3 orang yang tidak anda kenal</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan18->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban18 as $jawaban18)
+            <div class="mb-2">
+              <input type="radio" name="q18" id="{{ $jawaban18->id }}" value="{{ $jawaban18->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban18->id }}">{{ $jawaban18->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q18" id="q18b" value="0" class="mr-2">
-              <label class="text-sky-500" for="q18b">Seorang teman akrab anda</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q18" id="q18c" value="0" class="mr-2">
-              <label class="text-sky-500" for="q18c">Berusaha menyelamatkan semua yang dapat mengakibatkan nyawa beresiko
-              </label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 19 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">19. Bayangkan anda memiliki seorang teman akrab dan suatu hari anda mendengar teman anda mati tertikam pisau. Anda sangat sedih dan berpikiran ingin balas dendam. Tak lama kemudian anda menemukan identitas pelaku tersebut dan anda tidak melaporkan ke polisi melainkan anda berencana untuk langsung membunuhnya. Bagaimana anda akan membunuh pelaku tersebut? Terdapat 7 pilihan jawaban.</legend>
-             <div class="mb-2">
-              <input type="radio" name="q19" id="q19a" value="0" class="mr-2">
-              <label class="text-sky-500" for="q19a">Menikam perut dengan pisau</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan19->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban19 as $jawaban19)
+            <div class="mb-2">
+              <input type="radio" name="q19" id="{{ $jawaban19->id }}" value="{{ $jawaban19->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban19->id }}">{{ $jawaban19->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q19" id="q19b" value="5" class="mr-2">
-              <label class="text-sky-500" for="q19b">Membunuhnya secara perlahan dengan memotong kakinya</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q19" id="q19c" value="5" class="mr-2">
-              <label class="text-sky-500" for="q19c">Membunuhnya dengan memotong-motong bagian tubuh</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q19" id="q19d" value="5" class="mr-2">
-              <label class="text-sky-500" for="q19d">Bunuh dahulu lalu potong lehernya</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q19" id="q19e" value="0" class="mr-2">
-              <label class="text-sky-500" for="q19e">Menusuk jantungnya</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q19" id="q19f" value="5" class="mr-2">
-              <label class="text-sky-500" for="q19f">Bunuh dahulu lalu dibakar mayatnya</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
           <!-- Pertayaan 20 -->
           <fieldset class="mb-14">
-            <legend class="mb-2 text-gray-200">20. Ada kakak beradik keduanya perempuan. Mereka pergi ke acara pemakaman ayah mereka bersama-sama. Disana mereka bertemu seorang lelaki tampan dan mereka langsung jatuh cinta terhadap laki-laki tersebut. Berselang hari kemudian si adik membunuh si kakak. Apa alasannya?</legend>
-             <div class="mb-2">
-              <input type="radio" name="q20" id="q20a" value="0" class="mr-2">
-              <label class="text-sky-500" for="q20a">Bersaing untuk cinta</label>
+            <legend class="mb-2 text-gray-200">{{ $pertanyaan20->teks_pertanyaan }}</legend>
+            @forelse ( $jawaban20 as $jawaban20)
+            <div class="mb-2">
+              <input type="radio" name="q20" id="{{ $jawaban20->id }}" value="{{ $jawaban20->point }}" class="mr-2">
+              <label class="text-sky-500" for="{{ $jawaban20->id }}">{{ $jawaban20->teks_jawaban }}</label>
             </div>
-             <div class="mb-2">
-              <input type="radio" name="q20" id="q20b" value="5" class="mr-2">
-              <label class="text-sky-500" for="q20b">ingin melihat laki-laki itu lagi</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q20" id="q20c" value="0" class="mr-2">
-              <label class="text-sky-500" for="q20c">Bersaing untuk mendapatkan perhatian</label>
-            </div>
-             <div class="mb-2">
-              <input type="radio" name="q20" id="q20d" value="0" class="mr-2">
-              <label class="text-sky-500" for="q20d">Adiknya cemburu</label>
-            </div>
+            @empty
+            <p class="text-red-500">Data jawaban tidak ditemukan.</p>
+            @endforelse
           </fieldset>
 
 
