@@ -15,7 +15,7 @@
         <nav class=" text-white bg-gray-900 border-gray-700">
             <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="/" class="flex items-center">
-                    <img src="({{('static/images/p.png')}}" class="h-10 mr-3 bg-blue-600" alt="Flowbite Logo" />
+                    <img src="{{('static/images/p.png')}}" class="h-10 mr-3 bg-blue-600" alt="Flowbite Logo" />
                     <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">SAIKO</span>
                 </a>
                 <button data-collapse-toggle="navbar-multi-level" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
@@ -31,31 +31,31 @@
     <main class="bg-black">
         <div class="container w-full mx-auto m-6 p-4 h-auto block  border rounded-xl shadow-lg text-white bg-gray-900 border-gray-700">
             <div class="bg-gray-700 rounded-lg p-4 pb-8 w-full">
-       
-                <p class="text-center mt-3 mb-8 text-5xl font-normal font-Pixelify">Your psycho percentage : {{ }} % </p>
+        
+                <p class="text-center mt-3 mb-8 text-5xl font-normal font-Pixelify">Your psycho percentage : {{ $pengguna->point }} % </p>
                 <div class="flex justify-between mb-1 w-1/2 mx-auto mt-4">
                     <span class="text-base font-medium text-white dark:text-white">0%</span>
                     <span class="text-sm font-medium text-white dark:text-white">100%</span>
                 </div>
                 <div class="w-1/2 bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 mx-auto relative">
-                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%" data-width="{{ total }}">
+                    <div class="bg-blue-600 h-2.5 rounded-full" style="width: 45%" data-width="{{ $pengguna->point }}">
                         <span class="absolute mt-3 text-white font-medium text-xs" id="percentage">
-                            {{ total }}%
+                            {{ $pengguna->point }}%
                         </span>
                     </div>
                 </div>
                 
                 <div class="text-5xl font-normal font-Pixelify mt-14 text-center">
-                    <p>{{ status_psikopat }}</p>
+                    <p>{{ $pengguna->status }}</p>
                 </div>
 
                 <div class="mt-10 flex justify-center">
-                    <img src="({{('/images/pngwing.png')}}" alt="" class="w-64 h-80">
+                    <img src="static/images/pngwing.png" alt="" class="w-64 h-80">
                 </div>
 
                 
                 <div class="flex justify-center mt-10">
-                    <a href="/main" class="  py-2 px-6 text-lg font-normal text-center rounded-lg  bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 shadow-black drop-shadow-xl hover:shadow-none hover:drop-shadow-none">
+                    <a href="{{ route('main') }}" class="  py-2 px-6 text-lg font-normal text-center rounded-lg  bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 shadow-black drop-shadow-xl hover:shadow-none hover:drop-shadow-none">
                         Retry
                     </a>
                 </div>

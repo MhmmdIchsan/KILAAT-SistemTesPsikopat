@@ -63,7 +63,7 @@
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="getstarted scrollto" href="/main">Get Started</a></li>
+          <li><a class="getstarted scrollto" href="{{ route('main') }}">Get Started</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -87,7 +87,7 @@
                 <h2 class="animate__animated animate__fadeInDown">Introduction</h2>
                 <p class="animate__animated animate__fadeInUp">Welcome to the captivating world of the Psychopath Test Website, where we invite you to embark on a profound journey of self-discovery and delve into the intricate complexities of human psychology. Our platform is designed to offer you an insightful glimpse into the inner workings of your mind, enabling you to unlock a deeper understanding of your personality and emotions</p>
                 <div>
-                  <a href="/main" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
+                  <a href="{{ route('main') }}" class="btn-get-started animate__animated animate__fadeInUp scrollto">Get Started</a>
                 </div>
               </div>
             </div>
