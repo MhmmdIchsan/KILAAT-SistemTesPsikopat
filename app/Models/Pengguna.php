@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\DB;
 
 class Pengguna extends Model
 {
@@ -12,9 +13,10 @@ class Pengguna extends Model
     protected $fillable = [
         'nama',
         'point',
-        'status',
+        'status'
     ];
-
-    protected $table = 'pengguna';
     
+    protected $table = 'pengguna';
+
+
 }

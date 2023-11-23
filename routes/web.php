@@ -14,19 +14,24 @@ use App\Http\Controllers\SaikoController;
 |
 */
 
-Route::get('/', function (){
-    return view('index');
-});
+// Route::get('/', [SaikoController::class, 'index']);
+// Route::get('/saiko/create', [SaikoController::class, 'create']);
+// Route::post('/saiko/store', [SaikoController::class, 'store']);
 
-// Route::get ('/main', function () {
-//     return view('main');
+
+Route::get('/', [SaikoController::class, 'index'])->name('saiko.index');
+Route::get('/create', [SaikoController::class, 'create'])->name('main');
+Route::post('/store', [SaikoController::class, 'store'])->name('saiko.store');
+Route::get('/result', [SaikoController::class, 'result'])->name('saiko.result');
+
+
+// Route::resource('/', SaikoController::class);
+
+// // Route::resource('/saiko', SaikoController::class);
+
+// Route::get('/result', function (){
+//     return view('result');
 // });
-Route::resource('/main', SaikoController::class);
-//Route::get('/main', [SaikoController::class, 'index']);
-
-Route::get('/result', function (){
-    return view('result');
-});
 
 // Route::post('/submit_answer', function () {
 //     $answers = [
