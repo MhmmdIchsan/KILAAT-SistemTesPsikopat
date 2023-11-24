@@ -18,427 +18,427 @@ class jawaban extends Seeder
         // Pertanyaan 1
         [
             'id' => 'q01a',
-            'jawaban' => 'Menakut-nakuti anda',
+            'teks_jawaban' => 'Menakut-nakuti anda',
             'point' => '0'
         ],
         [
             'id' => 'q01b',
-            'jawaban' => 'Jangan bilang siapa-siapa ya kamu!',
+            'teks_jawaban' => 'Jangan bilang siapa-siapa ya kamu!',
             'point' => '0'
         ],
         [
             'id' => 'q01c',
-            'jawaban' => 'Menyuruh masuk ke dalam',
+            'teks_jawaban' => 'Menyuruh masuk ke dalam',
             'point' => '0'
         ],
         [
             'id' => 'q01d',
-            'jawaban' => 'Hitung lantai',
+            'teks_jawaban' => 'Hitung lantai',
             'point' => '5'
         ],
         [
         // Pertanyaan 2
-            'id' => 'q2a',
-            'jawaban' => 'Membiarkan kereta melaju',
+            'id' => 'q02a',
+            'teks_jawaban' => 'Membiarkan kereta melaju',
             'point' => '0'
         ],
         [
-            'id' => 'q2b',
-            'jawaban' => 'mendorong orang disebelah anda',
+            'id' => 'q02b',
+            'teks_jawaban' => 'mendorong orang disebelah anda',
             'point' => '5'
         ],
         [
         // Pertanyaan 3
             'id' => 'q3a',
-            'jawaban' => 'Menyuruh untuk berbaris',
+            'teks_jawaban' => 'Menyuruh untuk berbaris',
             'point' => '0'
         ],
         [
             'id' => 'q3b',
-            'jawaban' => 'Menembak asal-asalan',
+            'teks_jawaban' => 'Menembak asal-asalan',
             'point' => '0'
         ],
         [
             'id' => 'q3c',
-            'jawaban' => 'Membunuh ibu dan bayi yang sedang di gendong',
+            'teks_jawaban' => 'Membunuh ibu dan bayi yang sedang di gendong',
             'point' => '0'
         ],
         [
             'id' => 'q3d',
-            'jawaban' => 'Membunuh ibu hamil',
+            'teks_jawaban' => 'Membunuh ibu hamil',
             'point' => '5'
         ],
         [
         // Pertanyaan 4
             'id' => 'q4a',
-            'jawaban' => '0%',
+            'teks_jawaban' => '0%',
             'point' => '5'
         ],
         [
             'id' => 'q4b',
-            'jawaban' => '25%',
+            'teks_jawaban' => '25%',
             'point' => '5'
         ],
         [
             'id' => 'q4c',
-            'jawaban' => '50%',
+            'teks_jawaban' => '50%',
             'point' => '0'
         ],
         [
             'id' => 'q4d',
-            'jawaban' => '75%',
+            'teks_jawaban' => '75%',
             'point' => '0'
         ],
         [
             'id' => 'q4e',
-            'jawaban' => '100%',
+            'teks_jawaban' => '100%',
             'point' => '0'
         ],
         [
         // Pertanyaan 5
             'id' => 'q5a',
-            'jawaban' => 'Merasa terganggu',
+            'teks_jawaban' => 'Merasa terganggu',
             'point' => '0'
         ],
         [
             'id' => 'q5b',
-            'jawaban' => 'Dendam dengan orang tersebut',
+            'teks_jawaban' => 'Dendam dengan orang tersebut',
             'point' => '0'
         ],
         [
             'id' => 'q5c',
-            'jawaban' => 'melepaskan penderitaan',
+            'teks_jawaban' => 'melepaskan penderitaan',
             'point' => '5'
         ],
         [
             'id' => 'q5d',
-            'jawaban' => 'Ingin mengambil barang-barang yang ada di orang tersebut',
+            'teks_jawaban' => 'Ingin mengambil barang-barang yang ada di orang tersebut',
             'point' => '0'
         ],
         [
         // Pertanyaan 6
             'id' => 'q6a',
-            'jawaban' => 'Tangannya diinjak',
+            'teks_jawaban' => 'Tangannya diinjak',
             'point' => '0'
         ],
         [
             'id' => 'q6b',
-            'jawaban' => 'melepaskan jari satu-persatu',
+            'teks_jawaban' => 'melepaskan jari satu-persatu',
             'point' => '5'
         ],
         [
             'id' => 'q6c',
-            'jawaban' => 'Menendang tangannya dengan keras',
+            'teks_jawaban' => 'Menendang tangannya dengan keras',
             'point' => '0'
         ],
         [
             'id' => 'q6d',
-            'jawaban' => 'Melemparkan barang yang besar dan keras',
+            'teks_jawaban' => 'Melemparkan barang yang besar dan keras',
             'point' => '5'
         ],
         [
         // Pertanyaan 7
             'id' => 'q7a',
-            'jawaban' => 'Buka lemari dan tusuk',
+            'teks_jawaban' => 'Buka lemari dan tusuk',
             'point' => '0'
         ],
         [
             'id' => 'q7b',
-            'jawaban' => 'menunggu',
+            'teks_jawaban' => 'menunggu',
             'point' => '5'
         ],
         [
             'id' => 'q7c',
-            'jawaban' => 'Tusuk-tusuk lemari',
+            'teks_jawaban' => 'Tusuk-tusuk lemari',
             'point' => '0'
         ],
         [
             'id' => 'q7d',
-            'jawaban' => 'Gembok/Kunci lemarinya',
+            'teks_jawaban' => 'Gembok/Kunci lemarinya',
             'point' => '5'
         ],
         [
         // Pertanyaan 8
             'id' => 'q8a',
-            'jawaban' => 'Tukang daging',
+            'teks_jawaban' => 'Tukang daging',
             'point' => '0'
         ],
         [
             'id' => 'q8b',
-            'jawaban' => 'Orang memasak',
+            'teks_jawaban' => 'Orang memasak',
             'point' => '0'
         ],
         [
             'id' => 'q8c',
-            'jawaban' => 'Tetangga anda',
+            'teks_jawaban' => 'Tetangga anda',
             'point' => '0'
         ],
         [
             'id' => 'q8d',
-            'jawaban' => 'anda sendiri',
+            'teks_jawaban' => 'anda sendiri',
             'point' => '5'
         ],
         [
             'id' => 'q8e',
-            'jawaban' => 'Kawan anda',
+            'teks_jawaban' => 'Kawan anda',
             'point' => '5'
         ],
         [
         // Pertanyaan 9
             'id' => 'q9a',
-            'jawaban' => 'Murah, tidak lancip',
+            'teks_jawaban' => 'Murah, tidak lancip',
             'point' => '5'
         ],
         [
             'id' => 'q9b',
-            'jawaban' => 'Mahal bisa disimpan',
+            'teks_jawaban' => 'Mahal bisa disimpan',
             'point' => '0'
         ],
         [
             'id' => 'q9c',
-            'jawaban' => 'Murah, hemat',
+            'teks_jawaban' => 'Murah, hemat',
             'point' => '0'
         ],
         [
             'id' => 'q9d',
-            'jawaban' => 'Murah lebih banyak yang bisa beli',
+            'teks_jawaban' => 'Murah lebih banyak yang bisa beli',
             'point' => '0'
         ],
         [
         // Pertanyaan 10
             'id' => 'q10a',
-            'jawaban' => 'Cek apakah ada cctv',
+            'teks_jawaban' => 'Cek apakah ada cctv',
             'point' => '0'
         ],
         [
             'id' => 'q10b',
-            'jawaban' => 'Melihat apakah orang tersebut sudah mati',
+            'teks_jawaban' => 'Melihat apakah orang tersebut sudah mati',
             'point' => '0'
         ],
         [
             'id' => 'q10c',
-            'jawaban' => 'Memastikan tidak ada jejak lagi',
+            'teks_jawaban' => 'Memastikan tidak ada jejak lagi',
             'point' => '0'
         ],
         [
             'id' => 'q10d',
-            'jawaban' => 'Melihat orang itu sedang mati',
+            'teks_jawaban' => 'Melihat orang itu sedang mati',
             'point' => '5'
         ],
         [
         // Pertanyaan 11
             'id' => 'q11a',
-            'jawaban' => 'Kakaknya membunuh ikannya',
+            'teks_jawaban' => 'Kakaknya membunuh ikannya',
             'point' => '0'
         ],
         [
             'id' => 'q11b',
-            'jawaban' => 'Coklatnya dimakan kakaknya',
+            'teks_jawaban' => 'Coklatnya dimakan kakaknya',
             'point' => '0'
         ],
         [
             'id' => 'q11c',
-            'jawaban' => 'Ingin dapat coklat lagi',
+            'teks_jawaban' => 'Ingin dapat coklat lagi',
             'point' => '0'
         ],
         [
             'id' => 'q11d',
-            'jawaban' => 'Ingin dapat coklat sebesar kakaknya',
+            'teks_jawaban' => 'Ingin dapat coklat sebesar kakaknya',
             'point' => '5'
         ],
         [
         // Pertanyaan 12
             'id' => 'q12a',
-            'jawaban' => 'mengambil kotak P3K',
+            'teks_jawaban' => 'mengambil kotak P3K',
             'point' => '5'
         ],
         [
             'id' => 'q12b',
-            'jawaban' => 'Mengintip kamar tidur',
+            'teks_jawaban' => 'Mengintip kamar tidur',
             'point' => '0'
         ],
         [
             'id' => 'q12c',
-            'jawaban' => 'menyapu pecahan guci',
+            'teks_jawaban' => 'menyapu pecahan guci',
             'point' => '5'
         ],
         [
             'id' => 'q12d',
-            'jawaban' => 'Memegang pentungan',
+            'teks_jawaban' => 'Memegang pentungan',
             'point' => '0'
         ],
         [
             'id' => 'q12e',
-            'jawaban' => 'Keluar dari rumah',
+            'teks_jawaban' => 'Keluar dari rumah',
             'point' => '0'
         ],
         [
         // Pertanyaan 13
             'id' => 'q13a',
-            'jawaban' => 'Membunuh 2 tawanan dan membiarkan 1 tawanan takut',
+            'teks_jawaban' => 'Membunuh 2 tawanan dan membiarkan 1 tawanan takut',
             'point' => '5'
         ],
         [
             'id' => 'q13b',
-            'jawaban' => 'Membunuh 1 tawanan dan membiarkan 2 tawanan takut',
+            'teks_jawaban' => 'Membunuh 1 tawanan dan membiarkan 2 tawanan takut',
             'point' => '0'
         ],
         [
             'id' => 'q13c',
-            'jawaban' => 'Membunuh semuanya untuk kebahagiaannya sendiri',
+            'teks_jawaban' => 'Membunuh semuanya untuk kebahagiaannya sendiri',
             'point' => '0'
         ],
         [
         // Pertanyaan 14
             'id' => 'q14a',
-            'jawaban' => 'pergi ke kamar mandi / bathtub',
+            'teks_jawaban' => 'pergi ke kamar mandi / bathtub',
             'point' => '5'
         ],
         [
             'id' => 'q14b',
-            'jawaban' => 'Menyalakan tv dan semua lampu',
+            'teks_jawaban' => 'Menyalakan tv dan semua lampu',
             'point' => '0'
         ],
         [
             'id' => 'q14c',
-            'jawaban' => 'Pergi ke ruang anggota keluarga yang belum tidur',
+            'teks_jawaban' => 'Pergi ke ruang anggota keluarga yang belum tidur',
             'point' => '0'
         ],
         [
             'id' => 'q14d',
-            'jawaban' => 'Telpon kawan akrab anda',
+            'teks_jawaban' => 'Telpon kawan akrab anda',
             'point' => '0'
         ],
         [
         // Pertanyaan 15
             'id' => 'q15a',
-            'jawaban' => 'Adegan pembunuhan',
+            'teks_jawaban' => 'Adegan pembunuhan',
             'point' => '0'
         ],
         [
             'id' => 'q15b',
-            'jawaban' => 'Pembunuh sedang mengejar korban',
+            'teks_jawaban' => 'Pembunuh sedang mengejar korban',
             'point' => '5'
         ],
         [
             'id' => 'q15c',
-            'jawaban' => 'Mayat jatuh dari ketinggian',
+            'teks_jawaban' => 'Mayat jatuh dari ketinggian',
             'point' => '0'
         ],
         [
             'id' => 'q15d',
-            'jawaban' => 'Orang bunuh diri',
+            'teks_jawaban' => 'Orang bunuh diri',
             'point' => '0'
         ],
         [
         // Pertanyaan 16
             'id' => 'q16a',
-            'jawaban' => 'Menanyakan barang berharga',
+            'teks_jawaban' => 'Menanyakan barang berharga',
             'point' => '0'
         ],
         [
             'id' => 'q16b',
-            'jawaban' => 'Meminta uang yang ada',
+            'teks_jawaban' => 'Meminta uang yang ada',
             'point' => '0'
         ],
         [
             'id' => 'q16c',
-            'jawaban' => 'Membiarkan anda ketakutan',
+            'teks_jawaban' => 'Membiarkan anda ketakutan',
             'point' => '5'
         ],
         [
             'id' => 'q16d',
-            'jawaban' => 'Kesalahan identitas',
+            'teks_jawaban' => 'Kesalahan identitas',
             'point' => '0'
         ],
         [
         // Pertanyaan 17
             'id' => 'q17a',
-            'jawaban' => 'Korbannya yang salah karena membiarkan gerbang terbuka',
+            'teks_jawaban' => 'Korbannya yang salah karena membiarkan gerbang terbuka',
             'point' => '0'
         ],
         [
             'id' => 'q17b',
-            'jawaban' => 'Pelaku kasus tersebut yang salah karena masuk',
+            'teks_jawaban' => 'Pelaku kasus tersebut yang salah karena masuk',
             'point' => '0'
         ],
         [
             'id' => 'q17c',
-            'jawaban' => 'Keduanya tidak salah, situasi yang memungkinkan itu terjadi',
+            'teks_jawaban' => 'Keduanya tidak salah, situasi yang memungkinkan itu terjadi',
             'point' => '5'
         ],
         [
             'id' => 'q17d',
-            'jawaban' => 'Keduanya salah',
+            'teks_jawaban' => 'Keduanya salah',
             'point' => '0'
         ],
         [
         // Pertanyaan 18
             'id' => 'q18a',
-            'jawaban' => '3 orang yang tidak anda kenal',
+            'teks_jawaban' => '3 orang yang tidak anda kenal',
             'point' => '5'
         ],
         [
             'id' => 'q18b',
-            'jawaban' => 'Seorang teman akrab anda',
+            'teks_jawaban' => 'Seorang teman akrab anda',
             'point' => '0'
         ],
         [
             'id' => 'q18c',
-            'jawaban' => 'Berusaha menyelamatkan semua yang dapat mengakibatkan nyawa beresiko',
+            'teks_jawaban' => 'Berusaha menyelamatkan semua yang dapat mengakibatkan nyawa beresiko',
             'point' => '0'
         ],
         [
         // Pertanyaan 19
             'id' => 'q19a',
-            'jawaban' => 'Menikam perut dengan pisau',
+            'teks_jawaban' => 'Menikam perut dengan pisau',
             'point' => '0'
         ],
         [
             'id' => 'q19b',
-            'jawaban' => 'Membunuhnya secara perlahan dengan memotong kakinya',
+            'teks_jawaban' => 'Membunuhnya secara perlahan dengan memotong kakinya',
             'point' => '5'
         ],
         [
             'id' => 'q19c',
-            'jawaban' => 'Membunuhnya dengan memotong-motong bagian tubuh',
+            'teks_jawaban' => 'Membunuhnya dengan memotong-motong bagian tubuh',
             'point' => '5'
         ],
         [
             'id' => 'q19d',
-            'jawaban' => 'Bunuh dahulu lalu potong lehernya',
+            'teks_jawaban' => 'Bunuh dahulu lalu potong lehernya',
             'point' => '5'
         ],
         [
             'id' => 'q19e',
-            'jawaban' => 'Menusuk jantungnya',
+            'teks_jawaban' => 'Menusuk jantungnya',
             'point' => '0'
         ],
         [
             'id' => 'q19f',
-            'jawaban' => 'Bunuh dahulu lalu dibakar mayatnya',
+            'teks_jawaban' => 'Bunuh dahulu lalu dibakar mayatnya',
             'point' => '5'
         ],
         [
         // Pertanyaan 20
             'id' => 'q20a',
-            'jawaban' => 'Bersaing untuk cinta',
+            'teks_jawaban' => 'Bersaing untuk cinta',
             'point' => '0'
         ],
         [
             'id' => 'q20b',
-            'jawaban' => 'ingin melihat laki-laki itu lagi',
-            'point' => '0'
+            'teks_jawaban' => 'ingin melihat laki-laki itu lagi',
+            'point' => '5'
         ],
         [
             'id' => 'q20c',
-            'jawaban' => 'Bersaing untuk mendapatkan perhatian',
+            'teks_jawaban' => 'Bersaing untuk mendapatkan perhatian',
             'point' => '0'
         ],
         [
             'id' => 'q20d',
-            'jawaban' => 'Adiknya cemburu',
-            'point' => '5'
+            'teks_jawaban' => 'Adiknya cemburu',
+            'point' => '0'
         ]
         ]);
     }
