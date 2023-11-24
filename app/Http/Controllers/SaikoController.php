@@ -42,7 +42,7 @@ class SaikoController extends Controller
 
         # get teks_jawaban from table jawaban where id like 'q01%'
         $jawaban1 = DB::table('jawaban')->where('id', 'like', 'q01%')->get();
-        $jawaban2 = DB::table('jawaban')->where('id', 'like', 'q2%')->get();
+        $jawaban2 = DB::table('jawaban')->where('id', 'like', 'q02%')->get();
         $jawaban3 = DB::table('jawaban')->where('id', 'like', 'q3%')->get();
         $jawaban4 = DB::table('jawaban')->where('id', 'like', 'q4%')->get();
         $jawaban5 = DB::table('jawaban')->where('id', 'like', 'q5%')->get();
