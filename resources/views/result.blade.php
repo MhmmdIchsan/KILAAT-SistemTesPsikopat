@@ -49,11 +49,63 @@
                     <p>{{ $pengguna->status }}</p>
                 </div>
 
-                <div class="mt-10 flex justify-center">
-                    <img src="static/images/pngwing.png" alt="" class="w-64 h-80">
+                @if ($pengguna->point >= 80 && $pengguna->point <= 100)
+                <div class="mt-6 mb-4 flex justify-center">
+                    <img src="static/images/ekstrim.png" alt="" class="w-64 h-80">
+                </div>
+                <div class="text-5xl font-normal font-Pixelify mt-12 text-center">
+                    <p>Saran : </p>
+                </div>
+                <div class="text-3xl font-normal font-Pixelify text-center">
+                    <p>Perlunya penanganan oleh profesional kesehatan mental, terapi intensif, dan pengawasan ketat untuk keselamatan semua pihak.</p>
                 </div>
 
-                
+                @elseif ($pengguna->point >= 60 && $pengguna->point <= 79)
+                <div class="mt-6 mb-4 flex justify-center">
+                    <img src="static/images/tinggi.png" alt="" class="w-64 h-80">
+                </div>
+                <div class="text-5xl font-normal font-Pixelify mt-12 text-center">
+                    <p>Saran : </p>
+                </div>
+                <div class="text-3xl font-normal font-Pixelify text-center">
+                    <p>Penerapan terapi perilaku kognitif dan pemantauan perilaku serta interaksi sosial untuk mengurangi potensi perilaku berbahaya.</p>
+                </div>
+
+                @elseif ($pengguna->point >= 40 && $pengguna->point <= 59)
+                <div class="mt-6 mb-4 flex justify-center">
+                    <img src="static/images/sedang.png" alt="" class="w-64 h-80">
+                </div>
+                <div class="text-5xl font-normal font-Pixelify mt-12 text-center">
+                    <p>Saran : </p>
+                </div>
+                <div class="text-3xl font-normal font-Pixelify text-center">
+                    <p>Fokus pada pengembangan empati dan keterampilan sosial, serta menyediakan dukungan emosional.</p>
+                </div>
+
+                @elseif ($pengguna->point >= 20 && $pengguna->point <= 39)
+                <div class="mt-6 mb-4 flex justify-center">
+                    <img src="static/images/rendah.png" alt="" class="w-64 h-80">
+                </div>
+                <div class="text-5xl font-normal font-Pixelify mt-12 text-center">
+                    <p>Saran : </p>
+                </div>
+                <div class="text-3xl font-normal font-Pixelify text-center">
+                    <p>Edukasi tentang kondisi mereka, serta pembentukan jaringan dukungan yang kuat termasuk keluarga, teman, dan profesional kesehatan.</p>
+                </div>
+
+                @else
+                <div class="mt-6 mb-4 flex justify-center">
+                    <img src="static/images/0.png" alt="" class="w-64 h-80">
+                </div>
+                <div class="text-5xl font-normal font-Pixelify mt-12 text-center">
+                    <p>Saran : </p>
+                </div>
+                <div class="text-3xl font-normal font-Pixelify text-center">
+                    <p>Jadilah diri sendiri dan terus tumbuh secara pribadi dan emosional dengan kepercayaan dan positivitas.</p>
+                </div>
+
+                @endif
+
                 <div class="flex justify-center mt-10">
                     <a href="{{ route('main') }}" class="  py-2 px-6 text-lg font-normal text-center rounded-lg  bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 shadow-black drop-shadow-xl hover:shadow-none hover:drop-shadow-none">
                         Retry
