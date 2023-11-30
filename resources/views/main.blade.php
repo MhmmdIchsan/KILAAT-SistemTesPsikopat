@@ -44,10 +44,11 @@
                 @csrf
                 <h5 class="mb-16 text-white text-3xl font-bold tracking-tight text-center ">PENILAIAN KARAKTER PSIKOPAT
                 </h5>
+                <h6 class="mb-10 text-slate-300	 text-xl font-bold tracking-tight" >Pilih opsi di bawah yang sesuai dengan pemahaman Anda, tanpa mencoba menghubungkannya dengan apa yang akan dilakukan oleh seorang Psikopat.</h6>
                 <fieldset class="nama">
                     <legend class="mb-2 text-gray-200">Isi Nama Anda :</legend>
                     <div class="mb-2">
-                        <input type="text" name="nama" id="nama" required class="mr-2 text-black">
+                        <input type="text" name="nama" id="nama" required class="mr-2 text-black bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-1/4 p-2.5 mb-10 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                     </div>
                 </fieldset>
 
