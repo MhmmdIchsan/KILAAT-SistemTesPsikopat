@@ -50,7 +50,7 @@
                 </div>
 
                 @if ($pengguna->point >= 80 && $pengguna->point <= 100)
-                <div class="mt-10 flex justify-center">
+                <div class="mt-6 mb-4 flex justify-center">
                     <img src="static/images/ekstrim.png" alt="" class="w-64 h-80">
                 </div>
                 <div class="text-5xl font-normal font-Pixelify mt-12 text-center">
@@ -61,7 +61,7 @@
                 </div>
 
                 @elseif ($pengguna->point >= 60 && $pengguna->point <= 79)
-                <div class="mt-10 flex justify-center">
+                <div class="mt-6 mb-4 flex justify-center">
                     <img src="static/images/tinggi.png" alt="" class="w-64 h-80">
                 </div>
                 <div class="text-5xl font-normal font-Pixelify mt-12 text-center">
@@ -72,7 +72,7 @@
                 </div>
 
                 @elseif ($pengguna->point >= 40 && $pengguna->point <= 59)
-                <div class="mt-10 flex justify-center">
+                <div class="mt-6 mb-4 flex justify-center">
                     <img src="static/images/sedang.png" alt="" class="w-64 h-80">
                 </div>
                 <div class="text-5xl font-normal font-Pixelify mt-12 text-center">
@@ -83,7 +83,7 @@
                 </div>
 
                 @elseif ($pengguna->point >= 20 && $pengguna->point <= 39)
-                <div class="mt-10 flex justify-center">
+                <div class="mt-6 mb-4 flex justify-center">
                     <img src="static/images/rendah.png" alt="" class="w-64 h-80">
                 </div>
                 <div class="text-5xl font-normal font-Pixelify mt-12 text-center">
@@ -94,7 +94,7 @@
                 </div>
 
                 @else
-                <div class="mt-10 flex justify-center">
+                <div class="mt-6 mb-4 flex justify-center">
                     <img src="static/images/0.png" alt="" class="w-64 h-80">
                 </div>
                 <div class="text-5xl font-normal font-Pixelify mt-12 text-center">
